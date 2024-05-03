@@ -1,0 +1,20 @@
+<div class="signup-container">
+  <form (ngSubmit)="signup(signupForm.value.username, signupForm.value.email, signupForm.value.password)" #signupForm="ngForm">
+    <mat-form-field>
+      <input matInput type="text" placeholder="First Name" id="firstName" name="firstName" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Last Name" id="lastName" name="lastName" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="email" placeholder="Email" id="email" name="email" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="tel" placeholder="Phone Number" id="phoneNumber" name="phoneNumber" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Password" id="password" name="password" ngModel required>
+    </mat-form-field>
+    <button mat-raised-button type="submit" [disabled]="!signupForm.valid">Sign Up</button>
+  </form>
+</div>
